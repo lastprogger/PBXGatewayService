@@ -28,17 +28,17 @@ abstract class AbstractApiRequest extends FormRequest
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getInitiatorUserId(): string
+    public function getUserId(): ?string
     {
         return $this->header(self::CUSTOM_HEADER_USER_ID);
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getInitiatorUserRole(): string
+    public function getUserRole(): ?string
     {
         return $this->header(self::CUSTOM_HEADER_USER_ROLE);
     }
